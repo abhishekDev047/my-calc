@@ -29,7 +29,7 @@
             margin-top: 90px;
         }
 
-        #result {
+        .result {
             width: auto;
             height: 20px;
             border: 2px solid black;
@@ -58,9 +58,25 @@
 
             <p>
             <h3>Here is your Result</h3>
-            <span id="result"> </span>
+            <span id="rslt" class="result"> </span>
             </p>
         </div>
+    </div>
+    <div class="container">
+        <p>
+            <h2>Some Extra Functions</h2>
+        </p>
+        <p>
+            <textarea name="problem" id="text3" cols="20" rows="1"></textarea>
+        </p>
+        <p>
+            <button class="btn"onclick={expofunc2()}>a <sup>2</sup></button>
+            <button class="btn"onclick={expofunc3()}>a <sup>3</sup></button>
+        </p>
+        <p>
+            <h2>Here is your result</h2>
+            <span class="result" id="rslt2"></span>
+        </p>
     </div>
 </body>
 <script>
@@ -73,8 +89,8 @@
         let sum = a1 + b1;
 
 
-        let result = document.getElementById('result');
-        result.innerHTML = (sum);
+        let result = document.getElementById('rslt');
+        rslt.innerHTML = (sum);
 
     };
     const minusfunc = () => {
@@ -85,8 +101,8 @@
         const b1 = Number(b);
         let minus = a1 - b1;
 
-        let result = document.getElementById('result');
-        result.innerHTML = (minus);
+        let result = document.getElementById('rslt');
+        rslt.innerHTML = (minus);
 
 
     };
@@ -98,8 +114,8 @@
         const b1 = Number(b);
         let multiply = a1 * b1;
 
-        let result = document.getElementById('result');
-        result.innerHTML = (multiply);
+        let result = document.getElementById('rslt');
+        rslt.innerHTML = (multiply);
     };
     const devidefunc = () => {
         console.log("devide clicked");
@@ -109,9 +125,29 @@
         const b1 = Number(b);
         let devide = a1 / b1;
 
-        let result = document.getElementById('result');
-        result.innerHTML = (devide);
+        let result = document.getElementById('rslt');
+        rslt.innerHTML = (devide);
     };
+    const expofunc2 = () => {
+        console.log("expofunc clicked");
+        let a = document.getElementById('text3').value;
+        const a1 = Number(a);
+        let expo = a1**2;
+        
+        let result = document.getElementById('rslt2');
+        rslt2.innerHTML = (expo);
+
+    }
+    const expofunc3 = () => {
+        console.log("expofunc clicked");
+        let a = document.getElementById('text3').value;
+        const a1 = Number(a);
+        let expo = a1**3;
+        
+        let result = document.getElementById('rslt2');
+        rslt2.innerHTML = (expo);
+
+    }
 </script>
 
 </html>
